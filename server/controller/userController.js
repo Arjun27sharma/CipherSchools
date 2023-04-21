@@ -209,7 +209,22 @@ exports.updateProfile = catchAsyncErrors(
         
         const newUserData = {
             name : req.body.name,
-            email : req.body.email
+            email : req.body.email,
+            links : {
+                linkedin : req.body.linkedin,
+                github : req.body.github,
+                instagram : req.body.instagram,
+                facebook : req.body.facebook,
+                twitter : req.body.twitter,
+                web : req.body.web
+            },
+            professional : {
+                highesteducation : req.body.highesteducation,
+                role : req.body.role
+            },
+            interest : req.body.interest,
+            about : req.body.about
+
         }
 
         //we will add cloudinary later

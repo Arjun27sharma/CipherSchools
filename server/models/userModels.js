@@ -44,6 +44,9 @@ const userSchema = new mongoose.Schema({
                 required : true
             }
     },
+    about : {
+        type : String
+    },
     links : {
         linkedin : {
             type : String,
@@ -66,7 +69,15 @@ const userSchema = new mongoose.Schema({
 
     },
     professional : {
-
+        highesteducation:{
+            type : String,
+        },
+        role : {
+            type : String
+        }
+    },
+    interest : {
+        type : Array,
     },
 
     resetPasswordToken : String,
