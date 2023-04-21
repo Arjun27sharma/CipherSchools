@@ -27,6 +27,7 @@ function LoginForm() {
         
       const response = await axios.post('http://localhost:5050/api/user/login', formData);
       console.log(response.data);
+      localStorage.setItem(response.data) //TODO
     } catch (error) {
       console.log(error);
     }

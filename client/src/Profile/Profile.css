@@ -1,3 +1,103 @@
 .profile{
-    width: 60vw;
+    /* width: 60vw; */
+    background-color: white;
 }
+
+.overview{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    background-color: rgb(244, 244, 244);
+
+    /* background-image: url('../../public/overview_background.png'); */
+    
+}
+
+
+
+
+.overview_left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.about>p{
+    margin: 5px;
+}
+
+.hello{
+    font-size: 20px;
+}
+
+.user_name{
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.mail{
+    font-size: 18px;
+}
+
+.profile_field{
+    width : 70%;
+    margin: auto;
+}
+
+
+.profile_field>.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.head_right{
+    width: 90px;
+    margin: 10px;
+    border-radius: 5px;
+    height: 30px;
+
+}
+
+hr{
+    width: 70%;
+}
+.head_left{
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.about_text{
+    width: 95%;
+    height: 100px;
+    margin: auto;
+}
+
+textarea{
+    width: 100%;
+    height: 100px;
+    margin: auto;
+    resize: none;
+    border: none;
+    outline: none;
+    background-color: rgb(244, 244, 244);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    font-size: 16px;
+
+}
+
+
+
+.calander{
+    width: 70vw;
+    margin: auto;
+}
+
+
