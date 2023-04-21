@@ -1,0 +1,120 @@
+.top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+
+.hidden{
+    display: none;
+}
+
+.close{
+    cursor: pointer;
+}
+
+::placeholder{
+    color: rgb(121, 121, 121);
+}
+
+.wrapper{
+    width: 45%;
+    padding: 10px 30px;
+    border: 1px gray solid;
+    border-radius: 25px;
+    background-color: white;
+}
+
+
+
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.update_button{
+    height: 45px;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    border : none;
+    background-color: rgb(255, 145, 2);
+    color: white;
+    font-size: 16px;
+    width: 150px;
+    /* margin: auto; */
+
+
+}
+.cancel_button{
+    height: 45px;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    border : none;
+    background-color: rgb(39, 39, 39);
+    color: white;
+    font-size: 16px;
+    width: 150px;
+    /* margin: auto; */
+}
+
+
+.update{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.avatar{
+    display: flex;
+    flex: 1;
+    border-radius: 100px;
+}
+
+
+.updateForm{
+    display: flex;
+    flex-direction: column;
+    flex: 9;
+}
+
+label{
+    margin-bottom: 2px;
+}
+
+input{
+    width: 95%;
+    border-radius: 8px;
+    height: 40px;
+    border: none;
+    background-color: rgb(240, 240, 240);
+}
+
+.field{
+    display: flex;
+    flex-direction: column;
+    width : 100%;
+    margin: auto;
+    gap: 5px;
+    /* margin: 0 20px; */
+    margin-bottom: 22px;
+}

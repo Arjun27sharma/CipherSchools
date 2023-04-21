@@ -30,6 +30,10 @@ const userSchema = new mongoose.Schema({
         minLength : [8, "Password should be greater than 8 characters"],
         select : false
     },
+    phone : {
+        type : String,
+        minLength : [10, "Password should be greater than 8 characters"],
+    },
     avatar : {
             public_id : {
                 type : String,
@@ -39,6 +43,30 @@ const userSchema = new mongoose.Schema({
                 type : String,
                 required : true
             }
+    },
+    links : {
+        linkedin : {
+            type : String,
+        },
+        github : {
+            type : String,
+        },
+        facebook : {
+            type : String,
+        },
+        instagram : {
+            type : String,
+        },
+        twitter : {
+            type : String,
+        },
+        web : {
+            type : String,
+        }
+
+    },
+    professional : {
+
     },
 
     resetPasswordToken : String,
