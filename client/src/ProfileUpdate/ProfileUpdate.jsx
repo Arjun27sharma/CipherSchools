@@ -4,6 +4,13 @@ import axios from 'axios'
 
 
 const ProfileUpdate = () => {
+
+
+    const token = localStorage.getItem('jwt');
+
+
+
+
     const [close, setClose] = useState(false)
 
     const [formData, setFormData] = useState({
@@ -23,17 +30,15 @@ const ProfileUpdate = () => {
     };
 
     const handleSubmit = async (event) => {
-        event.preventDefault();
+        // event.preventDefault();
 
         console.log(formData)
-
         try {
-
-            const response = await axios.post('http://localhost:5050/api/user/login', formData);
-            console.log(response.data);
-        } catch (error) {
+            const response = await axios.put('http://localhost:5050/api/me/update', formData, {withCredentials : true});
+            return response.data;
+          } catch (error) {
             console.log(error);
-        }
+          }
     };
 
     return (
@@ -74,7 +79,7 @@ const ProfileUpdate = () => {
 
             <div className="buttons">
                         <button className='cancel_button'>Cancel</button>
-                        <button type="submit" className='update_button'>Update</button>
+                        <button type="submit" className='update_button' onClick={() => handleSubmit()}>Update</button>
                     </div>
 
         </div>

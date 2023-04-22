@@ -2,7 +2,12 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import "./LoginForm.css"
 
+
+
+
 function LoginForm() {
+
+
 
     const [close ,setClose] = useState(false)
   const [formData, setFormData] = useState({
@@ -27,7 +32,7 @@ function LoginForm() {
         
       const response = await axios.post('http://localhost:5050/api/user/login', formData);
       console.log(response.data);
-      localStorage.setItem(response.data) //TODO
+      console.log(response.cookie)
     } catch (error) {
       console.log(error);
     }
