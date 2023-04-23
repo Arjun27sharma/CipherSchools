@@ -1,8 +1,43 @@
-import React from 'react'
+import React, {useState} from 'react'
 import MyCalendar from '../Calander/MyCalander'
 import './Profile.css'
+import Navbar from '../Navbar/Navbar';
+import axios from 'axios';
+
 
 const Profile = () => {
+
+    const [aboutData, setAboutData] = useState({
+        about : ""
+      });
+
+      const [formData, setFormData] = useState({
+          
+      })
+    
+      const handleChange = (event) => {
+        const { name, value } = event.target;
+        setFormData({
+          ...aboutData,
+          [name]: value
+        });
+      };
+
+    const handleAboutChange = async (event) => {
+        event.preventDefault();
+
+        try {
+        
+            const response = await axios.post('http://localhost:5050/api/user/login', formData);
+            console.log(response.data);
+            console.log(response.cookie)
+          } catch (error) {
+            console.log(error);
+          }
+
+
+    }
+
     const data = [
         {
             name: 'Linkedin',
@@ -29,9 +64,10 @@ const Profile = () => {
             img: './web.svg'
         }
     ]
-    
+
     return (
         <div className='profile'>
+            <Navbar />
             <div className="overview">
                 <div className="overview_left">
                     <img src="./avatar.png" alt="" width="80px" />

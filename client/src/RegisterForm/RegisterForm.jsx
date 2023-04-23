@@ -10,6 +10,7 @@ function RegisterForm() {
     email: '',
     password: '',
   });
+  const [response ,setResponse] = useState("xcvcx")
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -27,7 +28,7 @@ function RegisterForm() {
     try {
         
       const response = await axios.post('http://localhost:5050/api/user/new', formData);
-      console.log(response.data);
+      setResponse(response.data)
     } catch (error) {
       console.log(error);
     }
@@ -104,6 +105,9 @@ function RegisterForm() {
         <img src="./google.png" alt="" width={"25px"}/>
         <p>Sign in with Google</p>
     </div>
+
+
+    <div className="success">{response}</div>
 
     </div>
   );
